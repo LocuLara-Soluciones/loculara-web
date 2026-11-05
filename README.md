@@ -1,7 +1,8 @@
 # loculara-web
 
-Sitio público de LocuLara Soluciones (loculara.com.ar).
+Sitio público de LocuLara Soluciones (www.loculara.com.ar).
 
-- `/` y `/tarjeta` redirigen a la tarjeta virtual del local de Cañuelas.
-- Para cambiar el destino: editar `destination` en `vercel.json` (dejar `"permanent": false`).
+- `/tarjeta` → tarjeta virtual del local de Cañuelas (`tarjeta/index.html`). Es la dirección impresa en el QR: no cambiarla.
+- `/` → por ahora redirige a `/tarjeta` (temporal, hasta que exista el home).
+- Imágenes en `img/`.
 - No conectar este proyecto con el sistema de gestión.

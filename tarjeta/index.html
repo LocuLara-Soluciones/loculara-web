@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LocuLara Cañuelas</title>
+<meta name="description" content="LocuLara Soluciones, Lara 730, Cañuelas. Pago Fácil, Western Union, punto Mercado Libre, trámites e impresiones. Lun a vie 8 a 20, sáb 9 a 14.">
+<meta property="og:title" content="LocuLara Soluciones · Cañuelas">
+<meta property="og:description" content="Pago Fácil, Western Union, punto Mercado Libre, trámites e impresiones. Lara 730, Cañuelas.">
+<meta property="og:image" content="https://www.loculara.com.ar/img/og.jpg">
+<meta property="og:url" content="https://www.loculara.com.ar/tarjeta">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#16233B">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: una sola columna tipo tarjeta, pensada para abrirse desde un QR en el celular */
+:root{
+  --bg:#EDF1F5; --card:#FFFFFF; --ink:#16233B; --muted:#5A6678;
+  --line:#D9E0E8; --accent:#D6336C; --accent-ink:#FFFFFF; --soft:#F6F8FA;
+  --ok:#1F8A4C; --off:#9AA3AF; --veil-top:30%; --veil-bot:62%;
+  --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1420; --card:#172033; --ink:#E9EEF5; --muted:#9AA6B8;
+  --line:#26324A; --accent:#F05A8A; --accent-ink:#1A0B12; --soft:#1C2740;
+  --ok:#4CC27E; --off:#6B7587; --veil-top:40%; --veil-bot:70%; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --card:#172033; --ink:#E9EEF5; --muted:#9AA6B8;
+  --line:#26324A; --accent:#F05A8A; --accent-ink:#1A0B12; --soft:#1C2740;
+  --ok:#4CC27E; --off:#6B7587; --veil-top:40%; --veil-bot:70%; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:24px 40px}
+.wrap{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:14px;position:relative}
+
+/* Fachada del local de fondo, atenuada para no competir con la tarjeta */
+.photo{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.photo::before{content:"";position:absolute;inset:-12px;background:url("/img/fachada.webp") center 30%/cover no-repeat;filter:saturate(.95) blur(1px)}
+.photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, color-mix(in srgb, var(--bg) var(--veil-top), transparent) 0%, color-mix(in srgb, var(--bg) var(--veil-bot), transparent) 55%, color-mix(in srgb, var(--bg) 92%, transparent) 100%)}
+.wrap .head,.wrap .list,.wrap .box,.wrap .phone{background:color-mix(in srgb, var(--card) 90%, transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+
+.addr{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;margin-top:3px}
+.addr svg{width:15px;height:15px;color:var(--accent);flex:none}
+
+.svcgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.svcgrid .s{grid-column:span 2;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;
+  background:var(--soft);border-radius:14px;padding:12px 8px 10px;min-width:0}
+.svcgrid .s.wide{grid-column:span 3}
+.logo{height:52px;width:100%;display:grid;place-items:center}
+.logo img{max-height:52px;max-width:100%;object-fit:contain;display:block}
+.logo img.round{border-radius:50%}
+.logo img.ml{border-radius:10px;max-height:46px}
+.logo img.wu{border-radius:8px;max-height:34px}
+.logo .gl{width:48px;height:48px;border-radius:12px;background:var(--card);color:var(--accent);display:grid;place-items:center;border:1px solid var(--line)}
+.logo .gl svg{width:28px;height:28px}
+.s span{font-size:13px;font-weight:600;line-height:1.25}
+@media (max-width:360px){.svcgrid .s, .svcgrid .s.wide{grid-column:span 3}}
+
+.head{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 20px;display:flex;flex-direction:column;gap:14px}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{width:56px;height:56px;border-radius:16px;background:var(--accent);color:var(--accent-ink);
+  display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.5px;flex:none}
+h1{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.05;margin:0;letter-spacing:-.5px;text-wrap:balance}
+.loc{color:var(--muted);font-size:14px;margin-top:3px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;
+  background:var(--soft);border-radius:999px;padding:6px 12px;align-self:flex-start}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--off)}
+.status.open .dot{background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb, var(--ok) 20%, transparent)}
+
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--accent-ink);
+  text-decoration:none;font-weight:600;font-size:17px;border-radius:14px;padding:16px 18px;min-height:56px}
+.cta:focus-visible,.row:focus-visible,.copy:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.hint{font-size:13.5px;color:var(--muted);margin:-4px 2px 0;text-align:center}
+
+.list{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.row{display:flex;align-items:center;gap:14px;padding:15px 18px;color:var(--ink);text-decoration:none;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row:hover{background:var(--soft)}
+.ic{width:38px;height:38px;border-radius:11px;background:var(--soft);display:grid;place-items:center;flex:none;color:var(--accent)}
+.ic svg{width:20px;height:20px}
+.txt{display:flex;flex-direction:column;min-width:0;flex:1}
+.t1{font-weight:600}
+.t2{font-size:13.5px;color:var(--muted);overflow-wrap:anywhere}
+.go{color:var(--muted);flex:none}
+.review .ic{background:var(--accent);color:var(--accent-ink)}
+.stars{color:#F2B01E;letter-spacing:1px;font-size:13px}
+
+.phone{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px 12px 18px}
+.num{font-family:var(--display);font-weight:600;font-size:20px;font-variant-numeric:tabular-nums;user-select:all}
+.copy{font:inherit;font-size:14px;font-weight:600;background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer}
+
+.box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 18px 16px}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.svc{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.svc li{background:var(--soft);border-radius:999px;padding:7px 13px;font-size:14.5px;font-weight:500}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:7px 0;border-top:1px solid var(--line);font-size:15px}
+tr:first-child td{border-top:0}
+td:last-child{text-align:right;font-weight:600}
+tr.today td{color:var(--accent)}
+.foot{text-align:center;font-size:12.5px;color:var(--muted);margin-top:4px}
+@media (prefers-reduced-motion: no-preference){.cta,.row{transition:background .15s, transform .15s}.cta:active{transform:scale(.98)}}
+</style>
+
+</head>
+<body>
+<div class="photo" aria-hidden="true"></div>
+<main class="wrap">
+  <section class="head">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">LL</div>
+      <div>
+        <h1>LocuLara Soluciones</h1>
+        <div class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lara 730, Cañuelas</div>
+      </div>
+    </div>
+    <div class="status" id="status"><span class="dot"></span><span id="statusTxt">Lun a vie 8 a 20 · Sáb 9 a 14</span></div>
+  </section>
+
+  <a class="cta" id="wa" href="https://wa.me/5492226601996?text=Hola%20LocuLara!%20Quiero%20recibir%20novedades%20y%20promos." target="_blank" rel="noopener">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
+    Escribinos por WhatsApp
+  </a>
+  <p class="hint">Agendanos como <strong>LocuLara</strong> para recibir promos y avisos.</p>
+
+  <div class="phone">
+    <span class="num" id="num">2226 60-1996</span>
+    <button class="copy" id="copyBtn" type="button">Copiar número</button>
+  </div>
+
+  <nav class="list" aria-label="Enlaces">
+    <a class="row review" href="https://g.page/r/CQNPR7ycMbAhEBI/review" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></span>
+      <span class="txt"><span class="t1">Dejanos tu opinión en Google</span><span class="t2 stars" aria-hidden="true">★★★★★</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+    <a class="row" href="https://www.instagram.com/locularasoluciones" target="_blank" rel="noopener" id="ig">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+      <span class="txt"><span class="t1">Instagram</span><span class="t2">@LocuLaraSoluciones</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+    <a class="row" href="https://www.google.com/maps/search/?api=1&amp;query=Lara+730%2C+Ca%C3%B1uelas%2C+Buenos+Aires" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <span class="txt"><span class="t1">Cómo llegar</span><span class="t2">Lara 730, Cañuelas</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+    <a class="row" href="https://www.facebook.com/profile.php?id=61569467369912" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"/></svg></span>
+      <span class="txt"><span class="t1">Facebook</span><span class="t2">Locu Lara</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+  </nav>
+
+  <section class="box">
+    <p class="lbl">Servicios</p>
+    <div class="svcgrid">
+      <div class="s"><div class="logo"><img class="round" src="/img/pago-facil.png" alt="Pago Fácil"></div><span>Pago Fácil</span></div>
+      <div class="s"><div class="logo"><img class="wu" src="/img/western-union.png" alt="Western Union"></div><span>Western Union</span></div>
+      <div class="s"><div class="logo"><img class="ml" src="/img/mercado-libre.webp" alt="Mercado Libre"></div><span>Punto Mercado Libre</span></div>
+      <div class="s wide"><div class="logo"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3h10v5"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/><path d="M17.5 11h.01"/></svg></span></div><span>Impresiones y fotocopias</span></div>
+      <div class="s wide"><div class="logo"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/><path d="M8 9h2"/></svg></span></div><span>Trámites</span></div>
+    </div>
+  </section>
+
+  <section class="box">
+    <p class="lbl">Horarios</p>
+    <table>
+      <tr data-days="1,2,3,4,5"><td>Lunes a viernes</td><td>08:00 – 20:00</td></tr>
+      <tr data-days="6"><td>Sábados</td><td>09:00 – 14:00</td></tr>
+      <tr data-days="0"><td>Domingos</td><td>Cerrado</td></tr>
+    </table>
+  </section>
+
+  <p class="foot">LocuLara Soluciones · Cañuelas, Buenos Aires</p>
+</main>
+
+<script>
+(function(){
+  // Estado abierto/cerrado según la hora de Argentina
+  try{
+    var p = new Intl.DateTimeFormat('en-US',{timeZone:'America/Argentina/Buenos_Aires',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var get = function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var day = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var mins = (parseInt(get('hour'),10)%24)*60 + parseInt(get('minute'),10);
+    var hours = {1:[480,1200],2:[480,1200],3:[480,1200],4:[480,1200],5:[480,1200],6:[540,840]};
+    var h = hours[day];
+    var el = document.getElementById('status'), txt = document.getElementById('statusTxt');
+    var fmt = function(m){return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')};
+    if(h && mins>=h[0] && mins<h[1]){ el.classList.add('open'); txt.textContent='Abierto ahora · cierra a las '+fmt(h[1]); }
+    else{
+      var nd=day, nm;
+      for(var i=0;i<8;i++){ var d=(day+i)%7, r=hours[d]; if(r && (i>0 || mins<r[0])){ nd=d; nm=r[0]; break; } }
+      var names=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+      txt.textContent='Cerrado · abre '+(nd===day?'hoy':names[nd])+' a las '+fmt(nm);
+    }
+    document.querySelectorAll('tr[data-days]').forEach(function(tr){
+      if(tr.dataset.days.split(',').indexOf(String(day))>-1) tr.classList.add('today');
+    });
+  }catch(e){}
+
+  // Copiar número
+  var btn=document.getElementById('copyBtn');
+  btn.addEventListener('click',function(){
+    var n='2226601996';
+    var done=function(){btn.textContent='Copiado';setTimeout(function(){btn.textContent='Copiar número'},1800)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('num'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Seleccionado';};
+    try{navigator.clipboard.writeText(n).then(done,fallback);}catch(e){fallback();}
+  });
+})();
+</script>
+</body>
+</html>
