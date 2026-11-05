@@ -1,7 +1,342 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LocuLara Soluciones</title>
-<meta http-equiv="refresh" content="0; url=/tarjeta">
-</head><body style="font-family:system-ui,sans-serif;padding:24px">
-<p><a href="/tarjeta">Abrir la tarjeta de LocuLara</a></p>
-</body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LocuLara Soluciones · Pago Fácil, Western Union y trámites en Cañuelas</title>
+<meta name="description" content="LocuLara Soluciones, Lara 730, Cañuelas. Pago Fácil, Western Union, punto Mercado Libre, recarga SUBE, partidas, certificados, VTV y trámites automotor. Controles remotos, kiosco, regalería y maquillaje.">
+<link rel="canonical" href="https://www.loculara.com.ar/">
+<meta property="og:title" content="LocuLara Soluciones · Cañuelas">
+<meta property="og:description" content="Pagos, envíos de dinero y trámites en Lara 730, Cañuelas. Lun a vie 8 a 20, sáb 9 a 14.">
+<meta property="og:image" content="https://www.loculara.com.ar/img/og.jpg">
+<meta property="og:url" content="https://www.loculara.com.ar/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta name="theme-color" content="#16233B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LocuLara Soluciones",
+  "url": "https://www.loculara.com.ar/",
+  "image": "https://www.loculara.com.ar/img/og.jpg",
+  "telephone": "+54 9 2226 60-1996",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lara 730",
+    "addressLocality": "Cañuelas",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00"}
+  ],
+  "paymentAccepted": "Efectivo, Débito, Crédito, QR",
+  "sameAs": [
+    "https://www.instagram.com/locularasoluciones",
+    "https://www.facebook.com/profile.php?id=61569467369912"
+  ]
+}
+</script>
+
+<style>
+/* Layout: hero con la fachada, después bloques en una columna que se abre a dos en pantallas anchas */
+:root{
+  --bg:#EDF1F5; --card:#FFFFFF; --ink:#16233B; --muted:#5A6678;
+  --line:#D9E0E8; --accent:#D6336C; --accent-ink:#FFFFFF; --soft:#F6F8FA;
+  --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#FFFFFF;
+  --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1420; --card:#172033; --ink:#E9EEF5; --muted:#9AA6B8;
+  --line:#26324A; --accent:#F05A8A; --accent-ink:#1A0B12; --soft:#1C2740;
+  --ok:#4CC27E; --off:#6B7587; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --card:#172033; --ink:#E9EEF5; --muted:#9AA6B8;
+  --line:#26324A; --accent:#F05A8A; --accent-ink:#1A0B12; --soft:#1C2740;
+  --ok:#4CC27E; --off:#6B7587; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.in{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+
+/* Hero */
+.hero{position:relative;color:var(--hero-ink);background:#16233B;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url("/img/fachada-home.webp") center 35%/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(14,20,32,.55) 0%, rgba(14,20,32,.72) 55%, rgba(14,20,32,.92) 100%)}
+.hero .in{position:relative;z-index:1;padding-block:28px 40px;display:flex;flex-direction:column;gap:18px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.3px}
+.mark{width:38px;height:38px;border-radius:11px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:15px}
+.navlinks{display:flex;gap:16px;font-size:14.5px;font-weight:500}
+.navlinks a{text-decoration:none;opacity:.9}
+.navlinks a:hover{opacity:1;text-decoration:underline}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(32px, 7vw, 54px);line-height:1.02;letter-spacing:-1px;margin:28px 0 0;max-width:15ch;text-wrap:balance}
+.lead{font-size:17px;max-width:46ch;margin:0;opacity:.92}
+.meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:14.5px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pill svg{width:15px;height:15px}
+.dot{width:9px;height:9px;border-radius:50%;background:#9AA3AF}
+.pill.open .dot{background:#4CC27E;box-shadow:0 0 0 4px rgba(76,194,126,.25)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:600;font-size:16px;border-radius:13px;padding:13px 18px;min-height:50px}
+.btn svg{width:20px;height:20px}
+.btn.pri{background:var(--accent);color:var(--accent-ink)}
+.btn.sec{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn:focus-visible,.navlinks a:focus-visible,summary:focus-visible,.foot a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+
+/* Secciones */
+main .in{padding-block:36px 8px;display:flex;flex-direction:column;gap:44px}
+section > h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,4.5vw,32px);letter-spacing:-.5px;line-height:1.1;margin:0 0 6px;text-wrap:balance}
+section > p.sub{color:var(--muted);margin:0 0 18px;max-width:60ch}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{margin:0;font-size:17px;font-weight:600;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.lg{height:48px;display:flex;align-items:center}
+.lg img{max-height:48px;max-width:150px;object-fit:contain;display:block}
+.lg img.round{border-radius:50%}
+.lg img.ml{border-radius:9px;max-height:42px}
+.lg img.wu{border-radius:7px;max-height:32px}
+.gl{width:46px;height:46px;border-radius:12px;background:var(--soft);color:var(--accent);display:grid;place-items:center;border:1px solid var(--line)}
+.gl svg{width:26px;height:26px}
+
+.tr{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px}
+.tr .card ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.tr .card li{background:var(--soft);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:500}
+.note{font-size:14px;color:var(--muted);margin:14px 0 0}
+.note a{color:var(--accent);font-weight:600}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px,1fr));gap:12px;align-items:start}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:9px 0;border-top:1px solid var(--line);font-size:15.5px}
+tr:first-child td{border-top:0}
+td:last-child{text-align:right;font-weight:600}
+tr.today td{color:var(--accent)}
+.pay{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.pay span{background:var(--soft);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:500}
+.addr{font-size:15.5px;margin:0}
+.maplink{color:var(--accent);font-weight:600;text-decoration:none}
+.maplink:hover{text-decoration:underline}
+
+.faq{display:flex;flex-direction:column;gap:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:600;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1;flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--muted);max-width:65ch}
+
+.review{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.review strong{display:block;font-size:18px}
+.review span{color:var(--muted);font-size:14.5px}
+.stars{color:#F2B01E;letter-spacing:2px}
+
+.foot{border-top:1px solid var(--line);margin-top:44px}
+.foot .in{padding-block:24px 32px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:14px;color:var(--muted)}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px}
+.foot a{text-decoration:none;font-weight:500;color:var(--ink)}
+.foot a:hover{text-decoration:underline}
+@media (max-width:520px){.navlinks{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="in">
+    <div class="top">
+      <a class="brand" href="/"><span class="mark" aria-hidden="true">LL</span>LocuLara Soluciones</a>
+      <nav class="navlinks" aria-label="Secciones">
+        <a href="#servicios">Servicios</a><a href="#tramites">Trámites</a><a href="#horarios">Horarios</a><a href="#preguntas">Preguntas</a>
+      </nav>
+    </div>
+    <h1>Pagos, envíos de dinero y trámites en Cañuelas</h1>
+    <p class="lead">Pago Fácil, Western Union, punto Mercado Libre y gestión de partidas, certificados y trámites automotor. Todo en un mismo local.</p>
+    <div class="meta">
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lara 730, Cañuelas</span>
+      <span class="pill" id="status"><span class="dot"></span><span id="statusTxt">Lun a vie 8 a 20 · Sáb 9 a 14</span></span>
+    </div>
+    <div class="ctas">
+      <a class="btn pri" href="https://wa.me/5492226601996?text=Hola%20LocuLara!%20Quer%C3%ADa%20consultar%20por" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a class="btn sec" href="https://www.google.com/maps/search/?api=1&amp;query=Lara+730%2C+Ca%C3%B1uelas%2C+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="in">
+
+    <section id="servicios">
+      <h2>Pagos y envíos</h2>
+      <p class="sub">Pagá tus cuentas, mandá o recibí dinero y retirá tus compras sin ir al centro.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="lg"><img class="round" src="/img/pago-facil.png" alt="Pago Fácil" width="48" height="48"></div>
+          <h3>Pago Fácil</h3>
+          <p>Facturas de luz, gas, agua, teléfono, impuestos y tarjetas.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><img class="wu" src="/img/western-union.png" alt="Western Union"></div>
+          <h3>Western Union</h3>
+          <p>Enviá y recibí dinero, dentro del país y desde el exterior.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><img class="ml" src="/img/mercado-libre.webp" alt="Mercado Libre"></div>
+          <h3>Punto Mercado Libre</h3>
+          <p>Retirá o despachá tus paquetes de Mercado Libre.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><path d="M2.5 10h19"/><path d="M6 15h4"/></svg></span></div>
+          <h3>Recarga SUBE</h3>
+          <p>Cargá tu tarjeta de transporte con efectivo, débito o QR.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8V3h10v5"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/><path d="M17.5 11h.01"/></svg></span></div>
+          <h3>Impresiones y fotocopias</h3>
+          <p>Imprimí documentos, formularios y comprobantes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tramites">
+      <h2>Trámites</h2>
+      <p class="sub">Te ayudamos a sacar turnos, partidas y certificados online, y a gestionar los trámites de tu auto.</p>
+      <div class="tr">
+        <article class="card">
+          <h3>Partidas digitales</h3>
+          <ul><li>Nacimiento</li><li>Defunción</li><li>Matrimonio</li><li>Divorcio</li></ul>
+        </article>
+        <article class="card">
+          <h3>Certificados y constancias</h3>
+          <ul><li>Certificado RDAM</li><li>Constancia de CUIL</li><li>Constancia de CUIT</li><li>Certificado de antecedentes</li></ul>
+        </article>
+        <article class="card">
+          <h3>Turnos y permisos</h3>
+          <ul><li>Turnos online</li><li>RENAPER</li><li>ANSES</li><li>Licencia de pesca</li></ul>
+        </article>
+        <article class="card">
+          <h3>Automotor</h3>
+          <ul><li>Turnos VTV</li><li>Beneficios VTV</li><li>Verificación policial</li><li>Transferencia</li><li>Trámites DNRPA</li></ul>
+        </article>
+      </div>
+      <p class="note">¿No ves tu trámite? <a href="https://wa.me/5492226601996?text=Hola!%20Quer%C3%ADa%20consultar%20por%20un%20tr%C3%A1mite" target="_blank" rel="noopener">Consultanos por WhatsApp</a> y te decimos qué documentación traer.</p>
+    </section>
+
+    <section id="productos">
+      <h2>También en el local</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="3"/><circle cx="12" cy="7" r="1.6"/><path d="M10 12h.01M14 12h.01M10 15h.01M14 15h.01M10 18h.01M14 18h.01"/></svg></span></div>
+          <h3>Controles remotos</h3>
+          <p>Para TV y otros equipos. Consultá por tu modelo.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.5 11h-13z"/><path d="M8.5 9V7a3.5 3.5 0 0 1 7 0v2"/></svg></span></div>
+          <h3>Kiosco</h3>
+          <p>Golosinas, bebidas sin alcohol y lo que necesitás al paso.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5"/><path d="M2.5 9h19V6.5h-19z"/><path d="M12 6.5v14"/><path d="M12 6.5C10 3 7 3.5 7 5.2S10 6.5 12 6.5zM12 6.5c2-3.5 5-3 5-1.3S14 6.5 12 6.5z"/></svg></span></div>
+          <h3>Regalería</h3>
+          <p>Ideas para regalar en cualquier fecha.</p>
+        </article>
+        <article class="card">
+          <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="11" width="8" height="10.5" rx="1.5"/><path d="M9.5 11V7.5L14.5 4v7"/></svg></span></div>
+          <h3>Maquillaje</h3>
+          <p>TEI, PINK21 y otras marcas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="horarios">
+      <h2>Horarios y ubicación</h2>
+      <div class="two">
+        <article class="card">
+          <h3>Horarios</h3>
+          <table>
+            <tr data-days="1,2,3,4,5"><td>Lunes a viernes</td><td>08:00 – 20:00</td></tr>
+            <tr data-days="6"><td>Sábados</td><td>09:00 – 14:00</td></tr>
+            <tr data-days="0"><td>Domingos</td><td>Cerrado</td></tr>
+          </table>
+        </article>
+        <article class="card">
+          <h3>Dónde estamos</h3>
+          <p class="addr">Lara 730, Cañuelas, Buenos Aires</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Lara+730%2C+Ca%C3%B1uelas%2C+Buenos+Aires" target="_blank" rel="noopener">Abrir en Google Maps ›</a>
+          <h3 style="margin-top:8px">Medios de pago</h3>
+          <div class="pay"><span>Efectivo</span><span>Débito</span><span>Crédito</span><span>QR</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <details><summary>¿Cómo puedo pagar?</summary><p>Aceptamos efectivo, tarjeta de débito, tarjeta de crédito y QR.</p></details>
+        <details><summary>¿Abren los domingos?</summary><p>No. Atendemos de lunes a viernes de 8 a 20 y los sábados de 9 a 14.</p></details>
+        <details><summary>¿Qué necesito para retirar un paquete de Mercado Libre?</summary><p>Traé el código de retiro que te muestra la app de Mercado Libre. Si tenés dudas, escribinos antes de venir.</p></details>
+        <details><summary>¿Qué documentación tengo que traer para un trámite?</summary><p>Depende del trámite. Escribinos por WhatsApp al 2226 60-1996 contándonos qué necesitás y te pasamos la lista antes de que vengas.</p></details>
+        <details><summary>¿Tienen el control remoto para mi equipo?</summary><p>Mandanos por WhatsApp una foto del control viejo o la marca y modelo del equipo, y te confirmamos si lo tenemos.</p></details>
+      </div>
+    </section>
+
+    <section>
+      <div class="review">
+        <div><strong>¿Ya nos visitaste?</strong><span><span class="stars" aria-hidden="true">★★★★★</span> Tu opinión en Google ayuda a otros vecinos a encontrarnos.</span></div>
+        <a class="btn pri" href="https://g.page/r/CQNPR7ycMbAhEBI/review" target="_blank" rel="noopener">Dejar opinión</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div>LocuLara Soluciones · Lara 730, Cañuelas · 2226 60-1996</div>
+    <nav aria-label="Redes">
+      <a href="https://www.instagram.com/locularasoluciones" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61569467369912" target="_blank" rel="noopener">Facebook</a>
+      <a href="/tarjeta">Tarjeta virtual</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  try{
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Argentina/Buenos_Aires',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var get=function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(get('weekday'));
+    var mins=(parseInt(get('hour'),10)%24)*60+parseInt(get('minute'),10);
+    var hours={1:[480,1200],2:[480,1200],3:[480,1200],4:[480,1200],5:[480,1200],6:[540,840]};
+    var h=hours[day], el=document.getElementById('status'), txt=document.getElementById('statusTxt');
+    var fmt=function(m){return String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0')};
+    if(h&&mins>=h[0]&&mins<h[1]){el.classList.add('open');txt.textContent='Abierto ahora · cierra a las '+fmt(h[1]);}
+    else{
+      var nd=day,nm;
+      for(var i=0;i<8;i++){var d=(day+i)%7,r=hours[d];if(r&&(i>0||mins<r[0])){nd=d;nm=r[0];break;}}
+      var names=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+      txt.textContent='Cerrado · abre '+(nd===day?'hoy':names[nd])+' a las '+fmt(nm);
+    }
+    document.querySelectorAll('tr[data-days]').forEach(function(tr){if(tr.dataset.days.split(',').indexOf(String(day))>-1)tr.classList.add('today');});
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
