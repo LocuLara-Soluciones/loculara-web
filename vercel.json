@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/", "destination": "https://claude.ai/artifact/WMCf8AjQW5816eMWxJqeKy", "permanent": false },
+    { "source": "/tarjeta", "destination": "https://claude.ai/artifact/WMCf8AjQW5816eMWxJqeKy", "permanent": false }
+  ]
+}
