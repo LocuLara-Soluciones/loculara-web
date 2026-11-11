@@ -52,9 +52,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16p
 
 /* Fachada del local de fondo, atenuada para no competir con la tarjeta */
 .photo{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.photo::before{content:"";position:absolute;inset:-12px;background:url("/img/fachada.webp") center 30%/cover no-repeat;filter:saturate(.95) blur(1px)}
-.photo::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg, color-mix(in srgb, var(--bg) var(--veil-top), transparent) 0%, color-mix(in srgb, var(--bg) var(--veil-bot), transparent) 55%, color-mix(in srgb, var(--bg) 92%, transparent) 100%)}
+.photo::before{content:"";position:absolute;inset:0;background:url("/img/fachada.webp") center 30%/cover no-repeat}
+.photo::after{content:none}
 .wrap .head,.wrap .list,.wrap .box,.wrap .phone{background:color-mix(in srgb, var(--card) 96%, transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 
 .addr{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:14px;margin-top:3px}
@@ -75,7 +74,8 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16p
 @media (max-width:360px){.svcgrid .s, .svcgrid .s.wide{grid-column:span 3}}
 
 .head{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 20px;display:flex;flex-direction:column;gap:14px}
-.brand{display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none}
+.brand:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:12px}
 .mark{width:56px;height:56px;border-radius:16px;background:var(--accent);color:var(--accent-ink);
   display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.5px;flex:none}
 h1{font-family:var(--display);font-weight:800;font-size:26px;line-height:1.05;margin:0;letter-spacing:-.5px;text-wrap:balance}
@@ -117,7 +117,7 @@ tr:first-child td{border-top:0}
 td:last-child{text-align:right;font-weight:600}
 tr.today td{color:var(--accent);font-weight:700}
 tr.today td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px}
-.foot{text-align:center;font-size:12.5px;color:var(--page-ink);margin-top:4px}
+.foot{text-align:center;font-size:12.5px;color:#2c3e50;background:#fff4a4;border-radius:10px;padding:6px 10px;align-self:center;margin-top:4px}
 @media (prefers-reduced-motion: no-preference){.cta,.row{transition:background .15s, transform .15s}.cta:active{transform:scale(.98)}}
 </style>
 
@@ -126,13 +126,13 @@ tr.today td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px
 <div class="photo" aria-hidden="true"></div>
 <main class="wrap">
   <section class="head">
-    <div class="brand">
+    <a class="brand" href="/" aria-label="Ir a la página principal de LocuLara Soluciones">
       <div class="mark" aria-hidden="true">LL</div>
       <div>
         <h1>LocuLara Soluciones</h1>
         <div class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lara 730, Cañuelas</div>
       </div>
-    </div>
+    </a>
     <div class="status" id="status"><span class="dot"></span><span id="statusTxt">Lun a vie 8 a 20 · Sáb 9 a 14</span></div>
   </section>
 
@@ -166,6 +166,11 @@ tr.today td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px
     <a class="row" href="https://www.facebook.com/profile.php?id=61569467369912" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"/></svg></span>
       <span class="txt"><span class="t1">Facebook</span><span class="t2">Locu Lara</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+    <a class="row" href="/">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/></svg></span>
+      <span class="txt"><span class="t1">Nuestra web</span><span class="t2">loculara.com.ar</span></span>
       <span class="go" aria-hidden="true">›</span>
     </a>
   </nav>
