@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pago Fácil y Western Union en Cañuelas · LocuLara Soluciones</title>
+<meta name="description" content="Pagá facturas e impuestos con Pago Fácil y enviá o recibí dinero con Western Union en Lara 730, Cañuelas. Lun a vie 8 a 20, sábados y feriados 9 a 14.">
+<link rel="canonical" href="https://www.loculara.com.ar/pago-facil-western-union">
+<meta property="og:title" content="Pago Fácil y Western Union en Cañuelas · LocuLara Soluciones">
+<meta property="og:description" content="Pagá facturas e impuestos con Pago Fácil y enviá o recibí dinero con Western Union en Lara 730, Cañuelas. Lun a vie 8 a 20, sábados y feriados 9 a 14.">
+<meta property="og:image" content="https://www.loculara.com.ar/img/og.jpg">
+<meta property="og:locale" content="es_AR">
+<meta name="theme-color" content="#2c3e50">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: hero con la fachada, después bloques en una columna que se abre a dos en pantallas anchas */
+/* Paleta de marca LocuLara: amarillo claro #fff4a4, amarillo fuerte #fee427, azul oscuro #2c3e50,
+   azul claro #86abd0, plata #e5e4e4, blanco #ffffff, negro #000000.
+   --accent = relleno amarillo (botones, marcas). --accent-text = color de links e íconos sobre fondo claro
+   (el amarillo no se lee como texto sobre blanco, por eso en modo claro es azul oscuro). */
+:root{
+  --navy:#2c3e50; --yellow:#fee427; --yellow-soft:#fff4a4; --sky:#86abd0; --silver:#e5e4e4;
+  /* Modo claro: portada azul oscuro; fondo amarillo pastel; tarjetas azul oscuro con texto blanco/plata y links amarillos */
+  --bg:#fff4a4; --card:#2c3e50; --ink:#2c3e50; --muted:#3d4f61;
+  --card-ink:#ffffff; --card-muted:#e5e4e4; --card-link:#fee427; --card-line:rgba(255,255,255,.16);
+  --line:rgba(44,62,80,.18); --accent:#2c3e50; --accent-ink:#ffffff; --accent-text:#2c3e50; --soft:#ffffff;
+  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#2c3e50;
+  --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#ffffff; --hero-bg:#2c3e50;
+  --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
+  --hero-btn:#25D366; --hero-btn-ink:#2c3e50;
+  --pill-bg:#fff4a4; --pill-line:transparent; --pill-ink:#2c3e50;
+  --sec-bg:#fff4a4; --sec-line:#fff4a4; --sec-ink:#2c3e50;
+  --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme:light;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
+  --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
+  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#25D366; --hero-btn-ink:#2c3e50;
+  --card-ink:#ffffff; --card-muted:#c3d3e3; --card-link:#fee427; --card-line:rgba(255,255,255,.14);
+  --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
+  --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
+  --pill-bg:#fff4a4; --pill-line:transparent; --pill-ink:#2c3e50;
+  --sec-bg:#fff4a4; --sec-line:#fff4a4; --sec-ink:#2c3e50; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
+  --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
+  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#25D366; --hero-btn-ink:#2c3e50;
+  --card-ink:#ffffff; --card-muted:#c3d3e3; --card-link:#fee427; --card-line:rgba(255,255,255,.14);
+  --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
+  --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
+  --pill-bg:#fff4a4; --pill-line:transparent; --pill-ink:#2c3e50;
+  --sec-bg:#fff4a4; --sec-line:#fff4a4; --sec-ink:#2c3e50; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+.in{max-width:1040px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+
+/* Hero */
+.hero{position:relative;color:var(--hero-ink);background:var(--hero-bg);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url("/img/fachada-home.webp") center 35%/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:var(--hero-overlay)}
+.hero .in{position:relative;z-index:1;padding-block:28px 40px;display:flex;flex-direction:column;gap:18px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.3px}
+.mark{width:38px;height:38px;border-radius:11px;background:var(--detail);color:var(--detail-ink);display:grid;place-items:center;font-size:15px}
+.navlinks{display:flex;gap:16px;font-size:14.5px;font-weight:500}
+.navlinks a{text-decoration:none;opacity:.9}
+.navlinks a:hover{opacity:1;text-decoration:underline}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(32px, 7vw, 54px);line-height:1.02;letter-spacing:-1px;margin:28px 0 0;max-width:15ch;text-wrap:balance}
+.lead{font-size:17px;max-width:46ch;margin:0;opacity:.92}
+.meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:14.5px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--pill-bg);color:var(--pill-ink);border:1px solid var(--pill-line);border-radius:999px;padding:6px 12px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pill svg{width:15px;height:15px}
+.dot{width:9px;height:9px;border-radius:50%;background:#9AA3AF}
+.pill.open .dot{background:#1F8A4C;box-shadow:0 0 0 4px rgba(31,138,76,.25)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:600;font-size:16px;border-radius:13px;padding:13px 18px;min-height:50px}
+.btn svg{width:20px;height:20px}
+.btn.pri{background:var(--accent);color:var(--accent-ink)}
+.hero .btn.pri{background:var(--hero-btn);color:var(--hero-btn-ink)}
+.btn.sec{background:var(--sec-bg);border:1.5px solid var(--sec-line);color:var(--sec-ink)}
+.btn:focus-visible,.navlinks a:focus-visible,summary:focus-visible,.foot a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+
+/* Secciones */
+main .in{padding-block:36px 8px;display:flex;flex-direction:column;gap:44px}
+section > h2{border-bottom:4px solid var(--title-line);display:inline-block;padding-bottom:4px;font-family:var(--display);font-weight:800;font-size:clamp(24px,4.5vw,32px);letter-spacing:-.5px;line-height:1.1;margin:0 0 6px;text-wrap:balance}
+section > p.sub{color:var(--muted);margin:0 0 18px;max-width:60ch}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{margin:0;font-size:17px;font-weight:600;line-height:1.25}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.lg{height:48px;display:flex;align-items:center}
+.lg img{max-height:48px;max-width:150px;object-fit:contain;display:block}
+.lg img.round{border-radius:50%}
+.lg img.ml{border-radius:9px;max-height:42px}
+.lg img.wu{border-radius:7px;max-height:32px}
+.gl{width:46px;height:46px;border-radius:12px;background:var(--soft);color:var(--accent-text);display:grid;place-items:center;border:1px solid var(--line)}
+.gl svg{width:26px;height:26px}
+
+.tr{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px}
+.tr .card ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.tr .card li{background:var(--soft);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:500}
+.note{font-size:14px;color:var(--muted);margin:14px 0 0}
+.note a{color:var(--accent-text);font-weight:600}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px,1fr));gap:12px;align-items:start}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:9px 0;border-top:1px solid var(--line);font-size:15.5px}
+tr:first-child td{border-top:0}
+td:last-child{text-align:right;font-weight:600}
+tr.today td{color:var(--accent-text);font-weight:700}
+tr.today td:first-child{box-shadow:inset 4px 0 0 var(--detail);padding-left:10px}
+.pay{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.pay span{background:var(--soft);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:500}
+.addr{font-size:15.5px;margin:0}
+.maplink{color:var(--accent-text);font-weight:600;text-decoration:none}
+.maplink:hover{text-decoration:underline}
+
+.faq{display:flex;flex-direction:column;gap:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:600;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent-text);font-size:20px;line-height:1;flex:none}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:var(--muted);max-width:65ch}
+
+.review{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.review strong{display:block;font-size:18px}
+.review span{color:var(--muted);font-size:14.5px}
+.stars{color:#F2B01E;letter-spacing:2px}
+/* Tarjetas azules: texto claro, links amarillos, íconos y etiquetas sobre amarillo pastel */
+.card,details,.review{color:var(--card-ink)}
+.card p,details p,.review span{color:var(--card-muted)}
+.card .gl{background:#fff4a4;color:#2c3e50;border-color:transparent}
+.tr .card li,.pay span{background:#fff4a4;color:#2c3e50}
+.card a:not(.btn),.card .maplink{color:var(--card-link)}
+.card td{border-top-color:var(--card-line)}
+.card tr.today td{color:var(--card-link)}
+summary::after{color:var(--card-link)!important}
+.review .btn.pri{background:#fee427;color:#2c3e50}
+.card .more{color:var(--card-link);font-weight:600;font-size:14.5px;text-decoration:none;margin-top:auto}
+.card .more:hover{text-decoration:underline}
+
+
+.foot{border-top:1px solid var(--line);margin-top:44px}
+.foot .in{padding-block:24px 32px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:14px;color:var(--muted)}
+.foot nav{display:flex;flex-wrap:wrap;gap:16px}
+.foot a{text-decoration:none;font-weight:500;color:var(--ink)}
+.foot a:hover{text-decoration:underline}
+@media (max-width:520px){.navlinks{display:none}}
+
+/* Subpáginas: portada compacta */
+.hero.sub .in{padding-block:22px 30px;gap:14px}
+.hero.sub h1{margin-top:14px;font-size:clamp(28px,6vw,44px);max-width:22ch}
+.crumb{font-size:14px;opacity:.9}
+.crumb a{color:inherit}
+.badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:999px;padding:4px 10px;align-self:flex-start}
+.badge.on{background:#25D366;color:#2c3e50}
+.badge.soon{background:#fff4a4;color:#2c3e50}
+.card ol,.card ul.req{margin:0;padding-left:20px;color:var(--card-muted);display:flex;flex-direction:column;gap:6px}
+.card ol li::marker,.card ul.req li::marker{color:var(--card-link);font-weight:700}
+.card strong{color:var(--card-ink)}
+.card.feature{border:3px solid #fee427;padding:22px}
+.card.feature h3{font-size:21px}
+.card.muted{opacity:.85}
+.card .btn{align-self:flex-start;margin-top:4px}
+.card .btn.wa{background:#25D366;color:#2c3e50}
+[hidden]{display:none!important}
+.draft{background:#fee427;color:#2c3e50;font-weight:700;text-align:center;padding:8px 12px;font-size:14px}
+</style>
+</head>
+<body>
+<header class="hero sub">
+  <div class="in">
+    <div class="top">
+      <a class="brand" href="/"><span class="mark" aria-hidden="true">LL</span>LocuLara Soluciones</a>
+      <nav class="navlinks" aria-label="Secciones">
+        <a href="/#servicios">Servicios</a><a href="/#tramites">Trámites</a><a href="/#horarios">Horarios</a><a href="/#preguntas">Preguntas</a>
+      </nav>
+    </div>
+    <div class="crumb"><a href="/">Inicio</a> › Pago Fácil y Western Union</div>
+    <h1>Pago Fácil y Western Union en Cañuelas</h1>
+    <p class="lead">Pagá tus cuentas y mandá o recibí dinero en Lara 730, en el mismo horario del local.</p>
+    <div class="ctas">
+      <a class="btn pri" href="https://wa.me/5492226601996?text=Hola%20LocuLara%21%20Quer%C3%ADa%20consultar%20por%20Pago%20F%C3%A1cil%20/%20Western%20Union" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
+        Consultar por WhatsApp
+      </a>
+      <a class="btn sec" href="https://www.google.com/maps/search/?api=1&amp;query=Lara+730%2C+Ca%C3%B1uelas%2C+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="in">
+    <section id="pago-facil">
+      <h2>Pago Fácil</h2>
+      <p class="sub">Pagá facturas de servicios, impuestos y tarjetas en el local, sin hacer filas en el centro.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="lg"><img class="round" src="/img/pago-facil.png" alt="Pago Fácil" width="48" height="48"></div>
+          <h3>Qué podés pagar</h3>
+          <ul class="req">
+            <li>Luz, gas, agua, teléfono e internet</li>
+            <li>Impuestos y tasas</li>
+            <li>Tarjetas y cuotas</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>¿Tu pago no está en la lista?</h3>
+          <p>Escribinos por WhatsApp con la empresa o el servicio y te confirmamos si se puede pagar en el local.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="western-union">
+      <h2>Western Union</h2>
+      <p class="sub">Enviá y recibí dinero dentro del país y desde el exterior.</p>
+      <div class="two">
+        <article class="card">
+          <div class="lg"><img class="wu" src="/img/western-union.png" alt="Western Union"></div>
+          <h3>Para enviar dinero</h3>
+          <ul class="req">
+            <li>Tu <strong>DNI, DU o pasaporte</strong>.</li>
+            <li>El <strong>DNI de quien recibe</strong>: copia o foto de ambos lados.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="lg"><img class="wu" src="/img/western-union.png" alt="Western Union"></div>
+          <h3>Para recibir dinero</h3>
+          <ul class="req">
+            <li>Tu <strong>DNI, DU o pasaporte</strong>.</li>
+            <li>Los datos del envío que te pasó quien te mandó el dinero.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="horarios">
+      <h2>Horarios</h2>
+      <p class="sub">Pago Fácil y Western Union atienden en el mismo horario que el local.</p>
+      <div class="two">
+        <article class="card">
+          <table>
+            <tr><td>Lunes a viernes</td><td>08:00 – 20:00</td></tr>
+            <tr><td>Sábados</td><td>09:00 – 14:00</td></tr>
+            <tr><td>Feriados</td><td>09:00 – 14:00</td></tr>
+            <tr><td>Domingos</td><td>Cerrado</td></tr>
+          </table>
+        </article>
+        <article class="card">
+          <h3>Dónde estamos</h3>
+          <p>Lara 730, Cañuelas, Buenos Aires</p>
+          <p><a href="tel:+5492226601996">Llamar al 2226 60-1996</a></p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Lara+730%2C+Ca%C3%B1uelas%2C+Buenos+Aires" target="_blank" rel="noopener">Abrir en Google Maps ›</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <details><summary>¿Necesito la boleta para pagar?</summary><p>En la mayoría de los pagos no. Si tenés la boleta, traela; si no, consultanos por WhatsApp.</p></details>
+        <details><summary>¿Puedo enviar dinero a otra provincia o al exterior?</summary><p>Sí. Con Western Union podés enviar dentro del país y al exterior.</p></details>
+        <details><summary>¿Qué documento necesito para enviar?</summary><p>Tu DNI, DU o pasaporte y el DNI de quien recibe (copia o foto de ambos lados).</p></details>
+        <details><summary>¿Hasta qué hora puedo pagar o enviar?</summary><p>Hasta el cierre del local: de lunes a viernes hasta las 20, y sábados y feriados hasta las 14.</p></details>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div>LocuLara Soluciones · Lara 730, Cañuelas · <a href="tel:+5492226601996">2226 60-1996</a></div>
+    <nav aria-label="Redes">
+      <a href="/">Inicio</a>
+      <a href="https://www.instagram.com/locularasoluciones" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61569467369912" target="_blank" rel="noopener">Facebook</a>
+      <a href="/tarjeta">Tarjeta virtual</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
