@@ -172,25 +172,17 @@ details p{margin:0 0 16px;color:var(--muted);max-width:65ch}
 .review strong{display:block;font-size:18px}
 .review span{color:var(--muted);font-size:14.5px}
 .stars{color:#F2B01E;letter-spacing:2px}
-/* Tarjetas azules: texto claro, links amarillos, logos e íconos sobre placa blanca */
+/* Tarjetas azules: texto claro, links amarillos, íconos y etiquetas sobre amarillo Pago Fácil */
 .card,details,.review{color:var(--card-ink)}
 .card p,details p,.review span{color:var(--card-muted)}
-.card .gl{background:#ffffff;color:#2c3e50;border-color:transparent}
-.tr .card li,.pay span{background:#ffffff;color:#2c3e50}
+.card .gl{background:#fee427;color:#2c3e50;border-color:transparent}
+.tr .card li,.pay span{background:#fee427;color:#2c3e50}
 .card a:not(.btn),.card .maplink{color:var(--card-link)}
 .card td{border-top-color:var(--card-line)}
 .card tr.today td{color:var(--card-link)}
 summary::after{color:var(--card-link)!important}
 .review .btn.pri{background:#fee427;color:#2c3e50}
-/* Maquillaje: tonos pastel rosa / lila propios de esa línea */
-.card.beauty{background:linear-gradient(145deg,#fde4ef 0%,#efe3fb 100%);border-color:#f3c9de}
-.card.beauty h3{color:#6b2d5c}
-.card.beauty p{color:#5e4570}
-.card.beauty .gl{background:#ffffff;color:#b04a8a;border-color:#f3c9de}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .card.beauty{background:linear-gradient(145deg,#4a3350 0%,#3d3557 100%);border-color:#6a4f72}
-:root:not([data-theme="light"]) .card.beauty h3{color:#fbd3e6}
-:root:not([data-theme="light"]) .card.beauty p{color:#e3d4f2}
-:root:not([data-theme="light"]) .card.beauty .gl{background:#5a3f63;color:#f7b8d6;border-color:#6a4f72}}
+
 
 .foot{border-top:1px solid var(--line);margin-top:44px}
 .foot .in{padding-block:24px 32px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;font-size:14px;color:var(--muted)}
@@ -303,7 +295,7 @@ summary::after{color:var(--card-link)!important}
           <h3>Regalería</h3>
           <p>Ideas para regalar en cualquier fecha.</p>
         </article>
-        <article class="card beauty">
+        <article class="card">
           <div class="lg"><span class="gl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="11" width="8" height="10.5" rx="1.5"/><path d="M9.5 11V7.5L14.5 4v7"/></svg></span></div>
           <h3>Maquillaje</h3>
           <p>TEI, PINK21 y otras marcas.</p>
