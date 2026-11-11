@@ -56,8 +56,9 @@
    (el amarillo no se lee como texto sobre blanco, por eso en modo claro es azul oscuro). */
 :root{
   --navy:#2c3e50; --yellow:#fee427; --yellow-soft:#fff4a4; --sky:#86abd0; --silver:#e5e4e4;
-  /* Modo claro: portada azul oscuro; fondo amarillo pastel y tarjetas amarillo fuerte */
-  --bg:#fff4a4; --card:#fee427; --ink:#2c3e50; --muted:#3d4f61;
+  /* Modo claro: portada azul oscuro; fondo amarillo pastel; tarjetas azul oscuro con texto blanco/plata y links amarillos */
+  --bg:#fff4a4; --card:#2c3e50; --ink:#2c3e50; --muted:#3d4f61;
+  --card-ink:#ffffff; --card-muted:#e5e4e4; --card-link:#fee427; --card-line:rgba(255,255,255,.16);
   --line:rgba(44,62,80,.18); --accent:#2c3e50; --accent-ink:#ffffff; --accent-text:#2c3e50; --soft:#ffffff;
   --detail:#fee427; --detail-ink:#2c3e50; --title-line:#2c3e50;
   --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#ffffff; --hero-bg:#2c3e50;
@@ -74,6 +75,7 @@
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
   --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
   --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#86abd0; --hero-btn-ink:#1e2b38;
+  --card-ink:#ffffff; --card-muted:#c3d3e3; --card-link:#fee427; --card-line:rgba(255,255,255,.14);
   --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
   --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
@@ -82,6 +84,7 @@
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
   --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
   --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#86abd0; --hero-btn-ink:#1e2b38;
+  --card-ink:#ffffff; --card-muted:#c3d3e3; --card-link:#fee427; --card-line:rgba(255,255,255,.14);
   --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
   --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
@@ -169,6 +172,16 @@ details p{margin:0 0 16px;color:var(--muted);max-width:65ch}
 .review strong{display:block;font-size:18px}
 .review span{color:var(--muted);font-size:14.5px}
 .stars{color:#F2B01E;letter-spacing:2px}
+/* Tarjetas azules: texto claro, links amarillos, logos e íconos sobre placa blanca */
+.card,details,.review{color:var(--card-ink)}
+.card p,details p,.review span{color:var(--card-muted)}
+.card .gl{background:#ffffff;color:#2c3e50;border-color:transparent}
+.tr .card li,.pay span{background:#ffffff;color:#2c3e50}
+.card a:not(.btn),.card .maplink{color:var(--card-link)}
+.card td{border-top-color:var(--card-line)}
+.card tr.today td{color:var(--card-link)}
+summary::after{color:var(--card-link)!important}
+.review .btn.pri{background:#fee427;color:#2c3e50}
 /* Maquillaje: tonos pastel rosa / lila propios de esa línea */
 .card.beauty{background:linear-gradient(145deg,#fde4ef 0%,#efe3fb 100%);border-color:#f3c9de}
 .card.beauty h3{color:#6b2d5c}
