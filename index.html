@@ -13,8 +13,7 @@
 <meta property="og:url" content="https://www.loculara.com.ar/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta name="theme-color" content="#fee427" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#2c3e50" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#2c3e50">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
@@ -57,13 +56,15 @@
    (el amarillo no se lee como texto sobre blanco, por eso en modo claro es azul oscuro). */
 :root{
   --navy:#2c3e50; --yellow:#fee427; --yellow-soft:#fff4a4; --sky:#86abd0; --silver:#e5e4e4;
-  /* Modo claro: el amarillo domina (portada y fondo), el azul oscuro va en textos y botones */
-  --bg:#fff4a4; --card:#ffffff; --ink:#2c3e50; --muted:#4a5b6c;
-  --line:#e5e4e4; --accent:#2c3e50; --accent-ink:#fee427; --accent-text:#2c3e50; --soft:#fee427;
-  --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#2c3e50; --hero-bg:#fee427;
-  --hero-overlay:linear-gradient(180deg, rgba(254,228,39,.82) 0%, rgba(254,228,39,.90) 55%, rgba(254,228,39,.97) 100%);
-  --pill-bg:rgba(255,255,255,.6); --pill-line:rgba(44,62,80,.25);
-  --sec-bg:transparent; --sec-line:#2c3e50; --sec-ink:#2c3e50;
+  /* Modo claro: azules dominan; el amarillo queda como detalle (logo, subrayado de títulos, día de hoy) */
+  --bg:#f6f6f5; --card:#ffffff; --ink:#2c3e50; --muted:#4a5b6c;
+  --line:#e5e4e4; --accent:#2c3e50; --accent-ink:#ffffff; --accent-text:#2c3e50; --soft:#e3edf7;
+  --detail:#fee427; --detail-ink:#2c3e50;
+  --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#ffffff; --hero-bg:#2c3e50;
+  --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
+  --hero-btn:#86abd0; --hero-btn-ink:#2c3e50;
+  --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
+  --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff;
   --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme:light;
@@ -71,14 +72,16 @@
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
-  --line:#3b5167; --accent:#fee427; --accent-ink:#2c3e50; --accent-text:#fee427; --soft:#34495e;
+  --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
+  --detail:#fee427; --detail-ink:#2c3e50; --hero-btn:#86abd0; --hero-btn-ink:#1e2b38;
   --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
   --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
   --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
-  --line:#3b5167; --accent:#fee427; --accent-ink:#2c3e50; --accent-text:#fee427; --soft:#34495e;
+  --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
+  --detail:#fee427; --detail-ink:#2c3e50; --hero-btn:#86abd0; --hero-btn-ink:#1e2b38;
   --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
   --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
@@ -99,7 +102,7 @@ a{color:inherit}
 .hero .in{position:relative;z-index:1;padding-block:28px 40px;display:flex;flex-direction:column;gap:18px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.3px}
-.mark{width:38px;height:38px;border-radius:11px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:15px}
+.mark{width:38px;height:38px;border-radius:11px;background:var(--detail);color:var(--detail-ink);display:grid;place-items:center;font-size:15px}
 .navlinks{display:flex;gap:16px;font-size:14.5px;font-weight:500}
 .navlinks a{text-decoration:none;opacity:.9}
 .navlinks a:hover{opacity:1;text-decoration:underline}
@@ -114,12 +117,13 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(32px, 7vw, 54px);l
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:600;font-size:16px;border-radius:13px;padding:13px 18px;min-height:50px}
 .btn svg{width:20px;height:20px}
 .btn.pri{background:var(--accent);color:var(--accent-ink)}
+.hero .btn.pri{background:var(--hero-btn);color:var(--hero-btn-ink)}
 .btn.sec{background:var(--sec-bg);border:1.5px solid var(--sec-line);color:var(--sec-ink)}
 .btn:focus-visible,.navlinks a:focus-visible,summary:focus-visible,.foot a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 
 /* Secciones */
 main .in{padding-block:36px 8px;display:flex;flex-direction:column;gap:44px}
-section > h2{font-family:var(--display);font-weight:800;font-size:clamp(24px,4.5vw,32px);letter-spacing:-.5px;line-height:1.1;margin:0 0 6px;text-wrap:balance}
+section > h2{border-bottom:4px solid var(--detail);display:inline-block;padding-bottom:4px;font-family:var(--display);font-weight:800;font-size:clamp(24px,4.5vw,32px);letter-spacing:-.5px;line-height:1.1;margin:0 0 6px;text-wrap:balance}
 section > p.sub{color:var(--muted);margin:0 0 18px;max-width:60ch}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px}
@@ -146,6 +150,7 @@ td{padding:9px 0;border-top:1px solid var(--line);font-size:15.5px}
 tr:first-child td{border-top:0}
 td:last-child{text-align:right;font-weight:600}
 tr.today td{color:var(--accent-text);font-weight:700}
+tr.today td:first-child{box-shadow:inset 4px 0 0 var(--detail);padding-left:10px}
 .pay{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
 .pay span{background:var(--soft);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:500}
 .addr{font-size:15.5px;margin:0}
