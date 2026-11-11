@@ -63,9 +63,9 @@
   --detail:#fee427; --detail-ink:#2c3e50; --title-line:#2c3e50;
   --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
-  --hero-btn:#86abd0; --hero-btn-ink:#2c3e50;
-  --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
-  --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff;
+  --hero-btn:#25D366; --hero-btn-ink:#2c3e50;
+  --pill-bg:#fff4a4; --pill-line:transparent; --pill-ink:#2c3e50;
+  --sec-bg:#fff4a4; --sec-line:#fff4a4; --sec-ink:#2c3e50;
   --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme:light;
@@ -74,21 +74,21 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
   --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
-  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#86abd0; --hero-btn-ink:#1e2b38;
+  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#25D366; --hero-btn-ink:#2c3e50;
   --card-ink:#ffffff; --card-muted:#c3d3e3; --card-link:#fee427; --card-line:rgba(255,255,255,.14);
   --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
-  --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
-  --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff; color-scheme:dark}}
+  --pill-bg:#fff4a4; --pill-line:transparent; --pill-ink:#2c3e50;
+  --sec-bg:#fff4a4; --sec-line:#fff4a4; --sec-ink:#2c3e50; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
   --line:#3b5167; --accent:#86abd0; --accent-ink:#1e2b38; --accent-text:#a9c4e0; --soft:#34495e;
-  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#86abd0; --hero-btn-ink:#1e2b38;
+  --detail:#fee427; --detail-ink:#2c3e50; --title-line:#fee427; --hero-btn:#25D366; --hero-btn-ink:#2c3e50;
   --card-ink:#ffffff; --card-muted:#c3d3e3; --card-link:#fee427; --card-line:rgba(255,255,255,.14);
   --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
   --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
-  --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
-  --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff; color-scheme:dark}
+  --pill-bg:#fff4a4; --pill-line:transparent; --pill-ink:#2c3e50;
+  --sec-bg:#fff4a4; --sec-line:#fff4a4; --sec-ink:#2c3e50; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -112,10 +112,10 @@ a{color:inherit}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(32px, 7vw, 54px);line-height:1.02;letter-spacing:-1px;margin:28px 0 0;max-width:15ch;text-wrap:balance}
 .lead{font-size:17px;max-width:46ch;margin:0;opacity:.92}
 .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:14.5px}
-.pill{display:inline-flex;align-items:center;gap:8px;background:var(--pill-bg);border:1px solid var(--pill-line);border-radius:999px;padding:6px 12px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--pill-bg);color:var(--pill-ink);border:1px solid var(--pill-line);border-radius:999px;padding:6px 12px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .pill svg{width:15px;height:15px}
 .dot{width:9px;height:9px;border-radius:50%;background:#9AA3AF}
-.pill.open .dot{background:#4CC27E;box-shadow:0 0 0 4px rgba(76,194,126,.25)}
+.pill.open .dot{background:#1F8A4C;box-shadow:0 0 0 4px rgba(31,138,76,.25)}
 .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:600;font-size:16px;border-radius:13px;padding:13px 18px;min-height:50px}
 .btn svg{width:20px;height:20px}
