@@ -13,7 +13,8 @@
 <meta property="og:url" content="https://www.loculara.com.ar/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta name="theme-color" content="#2c3e50">
+<meta name="theme-color" content="#fee427" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#2c3e50" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
@@ -56,9 +57,13 @@
    (el amarillo no se lee como texto sobre blanco, por eso en modo claro es azul oscuro). */
 :root{
   --navy:#2c3e50; --yellow:#fee427; --yellow-soft:#fff4a4; --sky:#86abd0; --silver:#e5e4e4;
-  --bg:#f6f6f5; --card:#ffffff; --ink:#2c3e50; --muted:#4a5b6c;
-  --line:#e5e4e4; --accent:#fee427; --accent-ink:#2c3e50; --accent-text:#2c3e50; --soft:#fff4a4;
-  --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#FFFFFF; --hero-bg:#2c3e50;
+  /* Modo claro: el amarillo domina (portada y fondo), el azul oscuro va en textos y botones */
+  --bg:#fff4a4; --card:#ffffff; --ink:#2c3e50; --muted:#4a5b6c;
+  --line:#e5e4e4; --accent:#2c3e50; --accent-ink:#fee427; --accent-text:#2c3e50; --soft:#fee427;
+  --ok:#1F8A4C; --off:#9AA3AF; --hero-ink:#2c3e50; --hero-bg:#fee427;
+  --hero-overlay:linear-gradient(180deg, rgba(254,228,39,.82) 0%, rgba(254,228,39,.90) 55%, rgba(254,228,39,.97) 100%);
+  --pill-bg:rgba(255,255,255,.6); --pill-line:rgba(44,62,80,.25);
+  --sec-bg:transparent; --sec-line:#2c3e50; --sec-ink:#2c3e50;
   --display:"Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
   --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme:light;
@@ -67,11 +72,17 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
   --line:#3b5167; --accent:#fee427; --accent-ink:#2c3e50; --accent-text:#fee427; --soft:#34495e;
-  --ok:#4CC27E; --off:#86abd0; color-scheme:dark}}
+  --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
+  --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
+  --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
+  --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#1e2b38; --card:#2c3e50; --ink:#ffffff; --muted:#c3d3e3;
   --line:#3b5167; --accent:#fee427; --accent-ink:#2c3e50; --accent-text:#fee427; --soft:#34495e;
-  --ok:#4CC27E; --off:#86abd0; color-scheme:dark}
+  --ok:#4CC27E; --off:#86abd0; --hero-ink:#ffffff; --hero-bg:#2c3e50;
+  --hero-overlay:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%);
+  --pill-bg:rgba(255,255,255,.14); --pill-line:rgba(255,255,255,.22);
+  --sec-bg:rgba(255,255,255,.12); --sec-line:rgba(255,255,255,.3); --sec-ink:#ffffff; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -84,7 +95,7 @@ a{color:inherit}
 /* Hero */
 .hero{position:relative;color:var(--hero-ink);background:var(--hero-bg);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:url("/img/fachada-home.webp") center 35%/cover no-repeat}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(44,62,80,.55) 0%, rgba(44,62,80,.75) 55%, rgba(30,43,56,.94) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:var(--hero-overlay)}
 .hero .in{position:relative;z-index:1;padding-block:28px 40px;display:flex;flex-direction:column;gap:18px}
 .top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.3px}
@@ -95,7 +106,7 @@ a{color:inherit}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(32px, 7vw, 54px);line-height:1.02;letter-spacing:-1px;margin:28px 0 0;max-width:15ch;text-wrap:balance}
 .lead{font-size:17px;max-width:46ch;margin:0;opacity:.92}
 .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:14.5px}
-.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 12px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--pill-bg);border:1px solid var(--pill-line);border-radius:999px;padding:6px 12px;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .pill svg{width:15px;height:15px}
 .dot{width:9px;height:9px;border-radius:50%;background:#9AA3AF}
 .pill.open .dot{background:#4CC27E;box-shadow:0 0 0 4px rgba(76,194,126,.25)}
@@ -103,7 +114,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(32px, 7vw, 54px);l
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:600;font-size:16px;border-radius:13px;padding:13px 18px;min-height:50px}
 .btn svg{width:20px;height:20px}
 .btn.pri{background:var(--accent);color:var(--accent-ink)}
-.btn.sec{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn.sec{background:var(--sec-bg);border:1.5px solid var(--sec-line);color:var(--sec-ink)}
 .btn:focus-visible,.navlinks a:focus-visible,summary:focus-visible,.foot a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
 
 /* Secciones */
